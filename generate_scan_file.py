@@ -8,7 +8,7 @@ import argparse
 import sys
 
 argparser = argparse.ArgumentParser(description="Read host:port lines from text import file and create testssl.sh command lines")
-argparser.add_argument("--command", "-c", default="testssl.sh", help="Invocation of testssl.sh")
+argparser.add_argument("--command", "-c", default="testssl", help="Invocation of testssl.sh")
 argparser.add_argument("--arguments", "-a", default="--warnings=batch --openssl-timeout=60 --log --json --csv", help="Additional arguments for each testssl.sh invocation")
 argparser.add_argument("files", nargs="*", help="List of input files. Each line must contain a host:port entry")
 args = argparser.parse_args()

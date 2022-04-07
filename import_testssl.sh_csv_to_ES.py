@@ -15,7 +15,7 @@ args = argparser.parse_args()
 
 connections.create_connection(hosts=args.elasticsearch)
 idx = Index(args.index)
-idx.doc_type(DocTestSSLResult)
+idx.document(DocTestSSLResult)
 DocTestSSLResult.init()
 try:
     idx.create()
